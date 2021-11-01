@@ -1,0 +1,33 @@
+body {
+  background-color: skyblue;
+  margin: 0;
+}
+.line {
+  position: absolute;
+  background-color: white;
+}
+.horizontal {
+  width: 100%;
+  height: 1px;
+  /* top: 50%; */
+}
+.vertical {
+  width: 1px;
+  height: 100%;
+  /* left: 50%; */
+}
+.target {
+  position: absolute;
+  /* top: 50%;
+  left: 50%; */
+  transform: translate(-50%, -50%);
+}
+.tag {
+  position: absolute;
+  color: white;
+  /* top: 50%;
+  left: 50%; */
+  font-size: 38px;
+  transform: translate( 20px, 20px);
+  margin: 20px;
+}
