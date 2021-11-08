@@ -17,21 +17,28 @@ addEventListener('load', function () {
   document.addEventListener('mousemove', (event) => {
     mouseX = event.clientX;
     mouseY = event.clientY;
-    console.log(mouseX + "px" + mouseY + "px");
-    console.log(`${mouseX} px ${mouseY} px백틱키사용`);
+    gsap.to(".horizontal", .5, {y:mouseY});
+    gsap.to(".vertical", .5, {x:mouseX});
+    gsap.to(".target", .5, {y:mouseY, y:mouseY});
+    gsap.to(".tag", .5, {x:mouseX, y:mouseY});
+    //console.log(mouseX + "px" + mouseY + "px");
+   // console.log(`${mouseX} px ${mouseY} px백틱키사용`);
   });
   
-  function animate() {
-    requestAnimationFrame(animate);
-    curX += (mouseX - curX) * 0.1;
-    curY += (mouseY - curY) * 0.1;
+ // function animate() {
+  //  requestAnimationFrame(animate);
+   // curX += (mouseX - curX) * 0.1;
+  //curY += (mouseY - curY) * 0.1;
 
-    horizontal.style.transform = `translateY(${curY}px)`;
-    vertical.style.transform = `translateX(${curX}px)`;
-    target.style.transform = `translate(${curX - targetHalfWidth}px, ${curY - targetHalfHeight}px)`;
-    tag.style.transform = `translate(${curX}px, ${curY}px)`;
-    tag.innerHTML = `${Math.ceil(curX)}px ${Math.ceil(curY)}px`;
-  }
+   // horizontal.style.transform = `translateY(${curY}px)`;
+   // vertical.style.transform = `translateX(${curX}px)`;
+   // target.style.transform = `translate(${curX - targetHalfWidth}px, ${curY - targetHalfHeight}px)`;
+  //  tag.style.transform = `translate(${curX}px, ${curY}px)`;
+  //  tag.innerHTML = `${Math.ceil(curX)}px ${Math.ceil(curY)}px`;
+  
 
-animate()
+//animate()
 });
+gsap.to("h2.title", {duration: 1, opacity: 0.3});
+gsap.to("box", {duration: 2, x: 300, opacity: 0.3});
+gsap.to("green", {duration: 3, rotation: 360, scale: 0.5});

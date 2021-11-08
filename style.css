@@ -31,3 +31,30 @@ body {
   transform: translate( 20px, 20px);
   margin: 20px;
 }
+
+
+.box {
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
+
+.orange {
+  top: 100px;
+  left: 100px;
+  background: orange;
+}
+
+.gray {
+  top: 300px;
+  left: 100px;
+  background: gray;
+}
+
+.green {
+  top: 500px;
+  left: 100px;
+  background: green;
+}
